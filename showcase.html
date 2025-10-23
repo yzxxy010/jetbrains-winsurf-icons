@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winsurf Icon Theme - 图标展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #181825;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            background: #1e1e2e;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2a2a3e;
+        }
+        
+        .section-title::before {
+            content: '▸';
+            color: #764ba2;
+            font-size: 32px;
+        }
+        
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 20px;
+        }
+        
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background: #2a2a3e;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .icon-item:hover {
+            transform: translateY(-5px);
+            background: #32324e;
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #181825;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        
+        .icon-wrapper img {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+        }
+        
+        .icon-name {
+            font-size: 10px;
+            color: #a0a0a0;
+            text-align: center;
+            word-break: break-all;
+            max-width: 100%;
+            line-height: 1.3;
+        }
+        
+        .icon-item:hover .icon-name {
+            color: #60a5fa;
+        }
+        
+        .search-box {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .search-input {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px 20px;
+            background: #2a2a3e;
+            border: 2px solid #32324e;
+            border-radius: 12px;
+            color: #e0e0e0;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #32324e;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 15px 25px;
+            background: #2a2a3e;
+            border: 2px solid #32324e;
+            border-radius: 12px;
+            color: #a0a0a0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .filter-btn:hover {
+            background: #32324e;
+            color: #e0e0e0;
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: #1e1e2e;
+            border-radius: 20px;
+        }
+        
+        .footer h2 {
+            color: #60a5fa;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .footer p {
+            color: #a0a0a0;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            font-size: 16px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #60a5fa;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .icon-item {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎨 Winsurf Icon Theme</h1>
+        <p>为 JetBrains IDE 打造的精美图标主题</p>
+        <p style="font-size: 16px; opacity: 0.9;">Beautiful Icon Theme for JetBrains IDEs</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">346</div>
+                <div class="stat-label">精美图标</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">207</div>
+                <div class="stat-label">文件类型</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">234</div>
+                <div class="stat-label">文件夹映射</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="搜索图标... (例如: java, folder, react)" id="searchInput">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="file">文件图标</button>
+            <button class="filter-btn" data-filter="folder">文件夹图标</button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">文件图标 File Icons</h2>
+        <div class="icon-grid" id="fileIcons">
+            <div class="loading">正在加载图标...</div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">文件夹图标 Folder Icons</h2>
+        <div class="icon-grid" id="folderIcons">
+            <div class="loading">正在加载图标...</div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h2>开始使用 Winsurf Icon Theme</h2>
+        <p>
+            让你的 JetBrains IDE 焕然一新！<br>
+            支持 IntelliJ IDEA, WebStorm, PyCharm, Rider 等所有 JetBrains IDE
+        </p>
+        <a href="https://github.com/yzxxy010/jetbrains-winsurf-icons/releases" class="btn-primary">
+            立即下载 Download Now
+        </a>
+    </div>
+    
+    <script>
+        // 文件图标列表
+        const fileIcons = [
+            'angular', 'angular-component', 'angular-directive', 'angular-guard', 'angular-module', 
+            'angular-pipe', 'angular-service', 'astro', 'audio', 'babel', 'biome', 
+            'brackets-blue', 'brackets-gray', 'brackets-green', 'brackets-orange', 'brackets-pink',
+            'brackets-purple', 'brackets-red', 'brackets-sky', 'brackets-yellow', 'bruno', 'bun',
+            'c', 'capacitor', 'clojure', 'cloudflare-workers', 'cmake', 'code', 'code-blue',
+            'code-gray', 'code-green', 'code-orange', 'code-pink', 'code-purple', 'code-red',
+            'code-sky', 'code-yellow', 'coffeescript', 'coldfusion', 'configure', 'connect',
+            'contentlayer', 'cplus', 'crystal', 'csharp', 'csv', 'cucumber', 'cuda', 'cypress',
+            'dart', 'database', 'deno', 'docker', 'document', 'docusaurus', 'drawio', 'drizzle',
+            'dts', 'dune', 'earthfile', 'editorconfig', 'elixir', 'erlang', 'eslint', 'exe',
+            'firebase', 'font', 'fortran', 'fresh', 'fsharp', 'func', 'gatsby', 'gear', 'gif',
+            'git', 'github', 'gitlab', 'gleam', 'go', 'go-mod', 'gradle', 'graphql', 'gulp',
+            'h', 'haml', 'haskell', 'http', 'hugo', 'i18n', 'icon', 'ignore', 'image', 'ionic',
+            'java', 'jenkins', 'jest', 'js', 'js-test', 'julia', 'julia-markdown', 'keystatic',
+            'knip', 'kotlin', 'laravel', 'license', 'liquid', 'lock', 'lua', 'luau', 'lunaria',
+            'markdoc', 'markdown', 'mdx', 'minecraft', 'mongo', 'nest', 'nest-controller',
+            'nest-guard', 'nest-service', 'netlify', 'next', 'nix', 'node', 'nodemon', 'notebook',
+            'npm', 'nunjucks', 'nuxt', 'ocaml', 'oxlint', 'page', 'panda', 'patch', 'pdf', 'perl',
+            'php', 'pkl', 'pnpm', 'postcss', 'prettier', 'prisma', 'proto', 'pug', 'pulumi',
+            'puzzle', 'python', 'r', 'razor', 'react', 'react-test', 'react-ts', 'redux-actions',
+            'redux-effects', 'redux-facade', 'redux-reducer', 'redux-selector', 'rescript',
+            'rescript-interface', 'robot', 'rome', 'rsbuild', 'rslib', 'rspack', 'ruby', 'rust',
+            'sanity', 'sass', 'sbt', 'scala', 'service-worker', 'severless', 'shell', 'solidity',
+            'statamic-antlers', 'storybook', 'stylelint', 'stylus', 'supabase', 'svelte',
+            'svelte-ts', 'svg', 'svx', 'swc', 'swift', 'tailwind', 'terraform', 'tex', 'text',
+            'ts', 'ts-test', 'ts-types', 'tsconfig', 'turborepo', 'twig', 'unocss', 'v',
+            'vanilla-extract', 'vercel', 'video', 'visual-studio', 'vite', 'vitest', 'vue',
+            'webpack', 'worker', 'xml', 'yaml', 'yarn', 'zig'
+        ];
+        
+        // 文件夹图标列表
+        const folderIcons = [
+            'folder', 'folder-actions', 'folder-android', 'folder-angular', 'folder-app',
+            'folder-assets', 'folder-auth', 'folder-blue', 'folder-blue-code', 'folder-blue-outline',
+            'folder-bruno', 'folder-config', 'folder-constants', 'folder-context', 'folder-core',
+            'folder-dark', 'folder-database', 'folder-drizzle', 'folder-effects', 'folder-facade',
+            'folder-firebase', 'folder-github', 'folder-gitlab', 'folder-graphql', 'folder-gray',
+            'folder-gray-code', 'folder-gray-outline', 'folder-green', 'folder-green-code',
+            'folder-green-outline', 'folder-helpers', 'folder-hooks', 'folder-images',
+            'folder-interceptors', 'folder-interfaces', 'folder-ios', 'folder-layout',
+            'folder-light', 'folder-mail', 'folder-middleware', 'folder-models', 'folder-modules',
+            'folder-mongo', 'folder-open', 'folder-open-dark', 'folder-open-light',
+            'folder-orange', 'folder-orange-code', 'folder-orange-code-1', 'folder-orange-code-2',
+            'folder-orange-code-3', 'folder-orange-code-4', 'folder-orange-outline', 'folder-pink',
+            'folder-pink-code', 'folder-pink-outline', 'folder-pipes', 'folder-prisma',
+            'folder-providers', 'folder-purple', 'folder-purple-code', 'folder-purple-outline',
+            'folder-red', 'folder-red-code', 'folder-red-outline', 'folder-reducer', 'folder-router',
+            'folder-selector', 'folder-services', 'folder-shared', 'folder-sky', 'folder-sky-code',
+            'folder-sky-outline', 'folder-src', 'folder-supabase', 'folder-target', 'folder-tina',
+            'folder-utils', 'folder-vercel', 'folder-yellow', 'folder-yellow-code',
+            'folder-yellow-outline'
+        ];
+        
+        let currentFilter = 'all';
+        
+        function createIconElement(iconName, type) {
+            const iconItem = document.createElement('div');
+            iconItem.className = 'icon-item';
+            iconItem.dataset.type = type;
+            iconItem.dataset.name = iconName.toLowerCase();
+            
+            const iconWrapper = document.createElement('div');
+            iconWrapper.className = 'icon-wrapper';
+            
+            const img = document.createElement('img');
+            const folder = type === 'folder' ? 'folders/' : '';
+            img.src = `src/main/resources/icons/${folder}${iconName}.svg`;
+            img.alt = iconName;
+            img.onerror = function() {
+                this.style.display = 'none';
+                iconWrapper.innerHTML = '❓';
+            };
+            
+            iconWrapper.appendChild(img);
+            
+            const iconNameDiv = document.createElement('div');
+            iconNameDiv.className = 'icon-name';
+            iconNameDiv.textContent = iconName;
+            
+            iconItem.appendChild(iconWrapper);
+            iconItem.appendChild(iconNameDiv);
+            
+            return iconItem;
+        }
+        
+        function loadIcons() {
+            const fileIconsContainer = document.getElementById('fileIcons');
+            const folderIconsContainer = document.getElementById('folderIcons');
+            
+            // Clear loading text
+            fileIconsContainer.innerHTML = '';
+            folderIconsContainer.innerHTML = '';
+            
+            // Load file icons
+            fileIcons.forEach(icon => {
+                fileIconsContainer.appendChild(createIconElement(icon, 'file'));
+            });
+            
+            // Load folder icons
+            folderIcons.forEach(icon => {
+                folderIconsContainer.appendChild(createIconElement(icon, 'folder'));
+            });
+        }
+        
+        function filterIcons() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const allIcons = document.querySelectorAll('.icon-item');
+            
+            allIcons.forEach(icon => {
+                const name = icon.dataset.name;
+                const type = icon.dataset.type;
+                
+                const matchesSearch = searchTerm === '' || name.includes(searchTerm);
+                const matchesFilter = currentFilter === 'all' || type === currentFilter;
+                
+                icon.style.display = matchesSearch && matchesFilter ? 'flex' : 'none';
+            });
+        }
+        
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', filterIcons);
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.dataset.filter;
+                filterIcons();
+            });
+        });
+        
+        // Load icons when page loads
+        window.addEventListener('DOMContentLoaded', loadIcons);
+    </script>
+</body>
+</html>
