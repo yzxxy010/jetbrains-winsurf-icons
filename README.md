@@ -9,7 +9,6 @@
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![Icons](https://img.shields.io/badge/icons-346-brightgreen.svg)](showcase.html)
   
-  [🖼️ 查看完整图标预览](#-图标预览) | [📸 View Full Icons Preview](#-icons-preview)
   
 </div>
 
@@ -165,11 +164,6 @@ cd jetbrains-icon-theme-plugin
 
 After installation, customize settings at **Settings** → **Appearance & Behavior** → **Winsurf Icons**
 
-### 🖼️ 图标预览
-
-![Icons Preview](windsurfIcons.png)
-
-> 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
 
 ## 开发
 
@@ -206,6 +200,13 @@ jetbrains-icon-theme-plugin/
 # 验证插件
 .\gradlew.bat verifyPlugin
 ```
+
+
+### 🖼️ 图标预览
+
+![Icons Preview](windsurfIcons.png)
+
+> 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
 
 ## 贡献
 
