@@ -1,27 +1,19 @@
 # 🎨 Winsurf Icon Theme for JetBrains IDEs
 
 <div align="center">
-  <img src="src/main/resources/META-INF/pluginIcon.svg" alt="Winsurf Icon Theme Logo" width="120" height="120">
   
-  <h3>让你的JetBrains IDE更加美观 | Make Your IDE Beautiful</h3>
+  ![Winsurf Icon Theme](windsurfIcons.png)
   
   [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yzxxy010/jetbrains-winsurf-icons/releases)
   [![JetBrains](https://img.shields.io/badge/JetBrains-2023.3+-orange.svg)](https://www.jetbrains.com/)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![Icons](https://img.shields.io/badge/icons-346-brightgreen.svg)](showcase.html)
+  
+  [🖼️ 查看完整图标预览](#-图标预览) | [📸 View Full Icons Preview](#-icons-preview)
+  
 </div>
 
 ---
-
-## 📸 Preview | 预览
-
-![Icon Theme Preview](showcase-grid.svg)
-
-> 346个精美图标，覆盖所有主流编程语言、框架、配置文件和文件夹类型
-
----
-
-[English](#english) | [中文](#中文)
 
 ## 中文
 
@@ -124,24 +116,11 @@ cd jetbrains-icon-theme-plugin
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
-### 🎨 更多展示
+### 🖼️ 图标预览
 
-<details>
-<summary>查看更多宣传图</summary>
+![Icons Preview](windsurfIcons.png)
 
-#### 横幅展示 (1920x1080)
-![Banner](showcase-banner.svg)
-
-#### 社交媒体分享图 (1200x1200)
-![Social](showcase-social.svg)
-
-#### 图标预览网格 (1600x900)
-![Preview](showcase-preview.svg)
-
-#### 互动式图标浏览器
-[打开展示页面](showcase.html) - 可搜索、分类查看所有346个图标
-
-</details>
+> 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
 
 ---
 
