@@ -1,0 +1,33 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="folder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="file" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <rect x="0" y="0" width="40" height="40" rx="8" fill="url(#bg)"/>
+  
+  <!-- 文件夹图标 -->
+  <path d="M10 12h8l2 2h10v14H10V12z" fill="url(#folder)" opacity="0.9"/>
+  
+  <!-- 文件图标 -->
+  <rect x="18" y="18" width="10" height="12" rx="1" fill="#ffffff" opacity="0.95"/>
+  <rect x="20" y="20" width="6" height="1" fill="url(#file)"/>
+  <rect x="20" y="22" width="6" height="1" fill="url(#file)"/>
+  <rect x="20" y="24" width="4" height="1" fill="url(#file)"/>
+  
+  <!-- 装饰点 -->
+  <circle cx="32" cy="8" r="2" fill="#10b981" opacity="0.8"/>
+  <circle cx="8" cy="32" r="2" fill="#ef4444" opacity="0.8"/>
+</svg>

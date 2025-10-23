@@ -1,0 +1,65 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.winsurf.icon-theme</id>
+    <name>Winsurf Icon Theme</name>
+    <vendor email="support@winsurf.com" url="https://winsurf.com">Winsurf</vendor>
+
+    <description><![CDATA[
+    <h2>🎨 Winsurf Icon Theme - 让你的IDE更加美观</h2>
+    <p>为JetBrains IDE打造的精美图标主题，灵感来源于Winsurf设计语言。</p>
+    <p>A beautiful icon theme for JetBrains IDEs inspired by Winsurf design.</p>
+    
+    <br/>
+    <h3>✨ 功能特性 | Features</h3>
+    <ul>
+        <li>🎯 <b>346个精美图标</b> - 覆盖所有常见文件类型和文件夹</li>
+        <li>📁 <b>智能文件夹识别</b> - 234种文件夹自动匹配独特图标</li>
+        <li>📄 <b>广泛文件支持</b> - 支持207种文件扩展名</li>
+        <li>🎨 <b>现代设计风格</b> - 色彩丰富，视觉清晰</li>
+        <li>⚡ <b>高性能</b> - 图标缓存优化，不影响IDE性能</li>
+        <li>🔧 <b>可自定义</b> - 提供设置界面，按需调整</li>
+    </ul>
+    
+    <br/>
+    <h3>📚 支持的文件类型 | Supported File Types</h3>
+    <ul>
+        <li><b>编程语言：</b>Java, Kotlin, Python, JavaScript, TypeScript, Go, Rust, C/C++, C#, Ruby, PHP, Swift等40+种语言</li>
+        <li><b>Web技术：</b>HTML, CSS, SCSS, Vue, React, Angular, Svelte, Astro等</li>
+        <li><b>配置文件：</b>JSON, XML, YAML, TOML, INI, ENV等</li>
+        <li><b>构建工具：</b>Gradle, Maven, Docker, Webpack, Vite, Rollup等</li>
+        <li><b>数据库：</b>SQL, MongoDB, Prisma, Drizzle等</li>
+        <li><b>云服务：</b>Firebase, Supabase, Vercel, Netlify等</li>
+    </ul>
+    
+    <br/>
+    <h3>🚀 快速开始 | Quick Start</h3>
+    <p>安装后重启IDE即可享受全新的图标体验！</p>
+    <p>如需自定义设置，请前往：<b>设置 → 外观与行为 → Winsurf Icons</b></p>
+    
+    <br/>
+    <p>Made with ❤️ for developers | 为开发者用心打造</p>
+    ]]></description>
+
+    <!-- Product and plugin compatibility requirements -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- File Icon Provider -->
+        <iconProvider implementation="com.winsurf.icontheme.WinsurfIconProvider" order="first"/>
+        
+        <!-- Settings Page -->
+        <applicationConfigurable
+                parentId="appearance"
+                instance="com.winsurf.icontheme.settings.WinsurfIconSettings"
+                id="com.winsurf.icontheme.settings"
+                displayName="Winsurf Icons"/>
+                
+        <!-- Application Service for Icon Management -->
+        <applicationService 
+                serviceImplementation="com.winsurf.icontheme.service.IconMappingService"/>
+    </extensions>
+
+    <actions>
+        <!-- Optional: Add actions if needed -->
+    </actions>
+</idea-plugin>
