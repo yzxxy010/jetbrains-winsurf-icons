@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Winsurf Icon Theme](windsurfIcons.png)
+  ![Winsurf Icon Theme](showcase-social.svg)
   
   [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yzxxy010/jetbrains-winsurf-icons/releases)
   [![JetBrains](https://img.shields.io/badge/JetBrains-2023.3+-orange.svg)](https://www.jetbrains.com/)
@@ -116,11 +116,7 @@ cd jetbrains-icon-theme-plugin
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
-### 🖼️ 图标预览
 
-![Icons Preview](windsurfIcons.png)
-
-> 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
 
 ---
 
@@ -169,7 +165,14 @@ cd jetbrains-icon-theme-plugin
 
 After installation, customize settings at **Settings** → **Appearance & Behavior** → **Winsurf Icons**
 
+### 🖼️ 图标预览
+
+![Icons Preview](windsurfIcons.png)
+
+> 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
+
 ## 开发
+
 
 ### 环境要求
 
