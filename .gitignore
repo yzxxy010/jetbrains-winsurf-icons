@@ -27,13 +27,24 @@ Thumbs.db
 # Logs
 *.log
 
-# Package Files
+# Package Files (but keep the plugin zip in build/distributions)
 *.jar
 *.war
 *.ear
-*.zip
 *.tar.gz
 *.rar
 
 # Local configuration
 local.properties
+
+# Scripts and temporary files
+push-to-github.ps1
+generate-showcase.ps1
+analyze-icons.ps1
+prepare-icons.ps1
+
+# Temporary and cache files
+*.tmp
+*.temp
+*.cache
+showcase/
