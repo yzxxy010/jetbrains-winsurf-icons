@@ -1,4 +1,4 @@
-package com.winsurf.icontheme
+package com.modernicons.icontheme
 
 import com.intellij.ide.IconProvider
 import com.intellij.openapi.components.service
@@ -8,13 +8,13 @@ import com.intellij.openapi.util.IconLoader
 import com.intellij.psi.PsiDirectory
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
-import com.winsurf.icontheme.service.IconMappingService
+import com.modernicons.icontheme.service.IconMappingService
 import javax.swing.Icon
 
-class WinsurfIconProvider : IconProvider(), DumbAware {
+class ModernIconProvider : IconProvider(), DumbAware {
     
     companion object {
-        private val logger = Logger.getInstance(WinsurfIconProvider::class.java)
+        private val logger = Logger.getInstance(ModernIconProvider::class.java)
     }
     
     private val iconService = service<IconMappingService>()

@@ -2,9 +2,9 @@
 
 <div align="center">
   
-  ![Winsurf Icon Theme](showcase-social.svg)
+  ![Modern Icon Theme](showcase-social.svg)
   
-  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yzxxy010/jetbrains-winsurf-icons/releases)
+  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yzxxy010/jetbrains-Modern-icons/releases)
   [![JetBrains](https://img.shields.io/badge/JetBrains-2023.3+-orange.svg)](https://www.jetbrains.com/)
   [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
   [![Icons](https://img.shields.io/badge/icons-346-brightgreen.svg)](showcase.html)
@@ -64,7 +64,7 @@
 
 #### 方法一：从发布版本安装（推荐）
 
-1. 下载最新版本的 `winsurf-icon-theme-1.0.0.zip`
+1. 下载最新版本的 `Modern-icon-theme-1.0.0.zip`
 2. 打开你的JetBrains IDE（IDEA、WebStorm、PyCharm、Rider等）
 3. 进入 **设置** → **插件** → **⚙️齿轮图标** → **从磁盘安装插件...**
 4. 选择下载的zip文件
@@ -74,7 +74,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/winsurf-icon-theme
+git clone https://github.com/yourusername/Modern-icon-theme
 cd jetbrains-icon-theme-plugin
 
 # Windows构建
@@ -89,14 +89,14 @@ cd jetbrains-icon-theme-plugin
 #### 方法三：从JetBrains Marketplace安装（即将发布）
 
 1. 打开IDE → **设置** → **插件** → **Marketplace**
-2. 搜索 **"Winsurf Icon Theme"**
+2. 搜索 **"Modern Icon Theme"**
 3. 点击 **安装** → 重启IDE
 
 ### ⚙️ 配置选项
 
-安装插件后，可在 **设置** → **外观与行为** → **Winsurf Icons** 中进行自定义：
+安装插件后，可在 **设置** → **外观与行为** → **Modern Icons** 中进行自定义：
 
-- ✅ 启用/禁用Winsurf图标主题
+- ✅ 启用/禁用Modern图标主题
 - 📁 显示自定义文件夹图标
 - 📄 显示自定义文件图标
 - 🔄 为未知文件类型使用默认图标
@@ -115,6 +115,9 @@ cd jetbrains-icon-theme-plugin
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
 
+### 🖼️ 图标预览
+
+![Icons Preview](modernIcons.png)
 
 
 ---
@@ -138,7 +141,7 @@ A beautiful icon theme plugin for JetBrains IDEs with 346 carefully designed ico
 
 #### Method 1: Install from Release (Recommended)
 
-1. Download the latest `winsurf-icon-theme-1.0.0.zip`
+1. Download the latest `Modern-icon-theme-1.0.0.zip`
 2. Open your JetBrains IDE
 3. Go to **Settings** → **Plugins** → **⚙️** → **Install Plugin from Disk...**
 4. Select the downloaded zip file
@@ -148,7 +151,7 @@ A beautiful icon theme plugin for JetBrains IDEs with 346 carefully designed ico
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/winsurf-icon-theme
+git clone https://github.com/yourusername/Modern-icon-theme
 cd jetbrains-icon-theme-plugin
 
 # Build on Windows
@@ -162,8 +165,7 @@ cd jetbrains-icon-theme-plugin
 
 ### ⚙️ Configuration
 
-After installation, customize settings at **Settings** → **Appearance & Behavior** → **Winsurf Icons**
-
+After installation, customize settings at **Settings** → **Appearance & Behavior** → **Modern Icons**
 
 ## 开发
 
@@ -218,5 +220,5 @@ MIT License
 
 ## 致谢
 
-- 图标设计灵感来自Winsurf主题
+- 图标设计灵感来自Windsurf主题
 - 基于JetBrains Platform Plugin SDK开发

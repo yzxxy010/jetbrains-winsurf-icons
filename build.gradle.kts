@@ -5,7 +5,7 @@ plugins {
     id("org.jetbrains.intellij") version "1.16.0"
 }
 
-group = "com.winsurf"
+group = "com.modernicons"
 version = "1.0.0"
 
 repositories {
@@ -34,6 +34,13 @@ tasks {
         kotlinOptions.jvmTarget = "17"
     }
     
+    // Include LICENSE file in the distribution
+    processResources {
+        from("LICENSE") {
+            into("META-INF")
+        }
+    }
+    
     // Disable instrumentCode task due to path issues
     instrumentCode {
         enabled = false
@@ -52,7 +59,7 @@ tasks {
             <h2>1.0.0</h2>
             <ul>
                 <li>Initial release</li>
-                <li>Custom file and folder icons based on Winsurf theme</li>
+                <li>Modern custom file and folder icons with beautiful design</li>
                 <li>Support for various file extensions and special folders</li>
             </ul>
         """.trimIndent())

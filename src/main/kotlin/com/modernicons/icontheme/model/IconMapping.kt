@@ -1,4 +1,4 @@
-package com.winsurf.icontheme.model
+package com.modernicons.icontheme.model
 
 import com.google.gson.annotations.SerializedName
 

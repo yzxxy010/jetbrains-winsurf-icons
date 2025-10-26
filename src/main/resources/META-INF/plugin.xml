@@ -1,13 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.winsurf.icon-theme</id>
-    <name>Winsurf Icon Theme</name>
-    <vendor email="support@winsurf.com" url="https://winsurf.com">Winsurf</vendor>
+    <id>com.modernicons.icon-theme</id>
+    <name>Modern Icon Theme</name>
+    <vendor email="support@modernicons.com" url="https://github.com/modernicons">Modern Icons</vendor>
 
     <description><![CDATA[
-    <h2>🎨 Winsurf Icon Theme - 让你的IDE更加美观</h2>
-    <p>为JetBrains IDE打造的精美图标主题，灵感来源于Winsurf设计语言。</p>
-    <p>A beautiful icon theme for JetBrains IDEs inspired by Winsurf design.</p>
+    <h2>🎨 Modern Icon Theme - 让你的IDE更加美观</h2>
+    <p>为JetBrains IDE打造的精美现代化图标主题。</p>
+    <p>A beautiful modern icon theme for JetBrains IDEs.</p>
     
     <br/>
     <h3>✨ 功能特性 | Features</h3>
@@ -34,7 +34,7 @@
     <br/>
     <h3>🚀 快速开始 | Quick Start</h3>
     <p>安装后重启IDE即可享受全新的图标体验！</p>
-    <p>如需自定义设置，请前往：<b>设置 → 外观与行为 → Winsurf Icons</b></p>
+    <p>如需自定义设置，请前往：<b>设置 → 外观与行为 → Modern Icons</b></p>
     
     <br/>
     <p>Made with ❤️ for developers | 为开发者用心打造</p>
@@ -45,18 +45,18 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- File Icon Provider -->
-        <iconProvider implementation="com.winsurf.icontheme.WinsurfIconProvider" order="first"/>
+        <iconProvider implementation="com.modernicons.icontheme.ModernIconProvider" order="first"/>
         
         <!-- Settings Page -->
         <applicationConfigurable
                 parentId="appearance"
-                instance="com.winsurf.icontheme.settings.WinsurfIconSettings"
-                id="com.winsurf.icontheme.settings"
-                displayName="Winsurf Icons"/>
+                instance="com.modernicons.icontheme.settings.ModernIconSettings"
+                id="com.modernicons.icontheme.settings"
+                displayName="Modern Icons"/>
                 
         <!-- Application Service for Icon Management -->
         <applicationService 
-                serviceImplementation="com.winsurf.icontheme.service.IconMappingService"/>
+                serviceImplementation="com.modernicons.icontheme.service.IconMappingService"/>
     </extensions>
 
     <actions>

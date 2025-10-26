@@ -1,4 +1,4 @@
-﻿{
+{
     "fileExtensions":  {
                            "proto":  "proto",
                            "hs":  "haskell",
@@ -475,9 +475,6 @@
                             "earthfile":  {
                                               "iconPath":  "/icons/earthfile.svg"
                                           },
-                            "windsurf-welcome-backgroundsvg":  {
-                                                                   "iconPath":  "/icons/windsurf-welcome-backgroundsvg.svg"
-                                                               },
                             "folder-shared":  {
                                                   "iconPath":  "/icons/folders/folder-shared.svg"
                                               },

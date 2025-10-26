@@ -1,4 +1,4 @@
-package com.winsurf.icontheme.service
+package com.modernicons.icontheme.service
 
 import com.google.gson.Gson
 import com.intellij.openapi.components.Service
@@ -6,7 +6,7 @@ import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.util.IconLoader
 import com.intellij.ui.scale.ScaleContext
 import com.intellij.util.IconUtil
-import com.winsurf.icontheme.model.IconTheme
+import com.modernicons.icontheme.model.IconTheme
 import java.io.InputStreamReader
 import javax.swing.Icon
 
@@ -27,7 +27,7 @@ class IconMappingService {
             if (resource != null) {
                 InputStreamReader(resource).use { reader ->
                     iconTheme = gson.fromJson(reader, IconTheme::class.java)
-                    logger.info("Winsurf Icon Theme loaded successfully")
+                    logger.info("Modern Icon Theme loaded successfully")
                     logger.info("Total icon definitions: ${iconTheme?.iconDefinitions?.size ?: 0}")
                     logger.info("File extensions: ${iconTheme?.fileExtensions?.size ?: 0}")
                     logger.info("Folder names: ${iconTheme?.folderNames?.size ?: 0}")

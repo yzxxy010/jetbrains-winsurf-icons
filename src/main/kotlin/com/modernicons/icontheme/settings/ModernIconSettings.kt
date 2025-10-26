@@ -1,4 +1,4 @@
-package com.winsurf.icontheme.settings
+package com.modernicons.icontheme.settings
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.options.Configurable
@@ -8,18 +8,18 @@ import com.intellij.ui.components.JBCheckBox
 import com.intellij.ui.components.JBLabel
 import com.intellij.util.ui.FormBuilder
 import com.intellij.util.ui.JBUI
-import com.winsurf.icontheme.service.IconMappingService
+import com.modernicons.icontheme.service.IconMappingService
 import javax.swing.*
 import java.awt.BorderLayout
 import java.awt.FlowLayout
 
-class WinsurfIconSettings : Configurable {
-    private var settingsPanel: WinsurfIconSettingsPanel? = null
+class ModernIconSettings : Configurable {
+    private var settingsPanel: ModernIconSettingsPanel? = null
     
-    override fun getDisplayName(): String = "Winsurf Icons"
+    override fun getDisplayName(): String = "Modern Icons"
     
     override fun createComponent(): JComponent {
-        settingsPanel = WinsurfIconSettingsPanel()
+        settingsPanel = ModernIconSettingsPanel()
         return settingsPanel!!.createPanel()
     }
     
@@ -42,14 +42,14 @@ class WinsurfIconSettings : Configurable {
     }
 }
 
-class WinsurfIconSettingsPanel {
+class ModernIconSettingsPanel {
     private lateinit var enabledCheckBox: JBCheckBox
     private lateinit var showFolderIconsCheckBox: JBCheckBox
     private lateinit var showFileIconsCheckBox: JBCheckBox
     private lateinit var useDefaultIconsCheckBox: JBCheckBox
     
     fun createPanel(): JPanel {
-        enabledCheckBox = JBCheckBox("Enable Winsurf Icons", true)
+        enabledCheckBox = JBCheckBox("Enable Modern Icons", true)
         showFolderIconsCheckBox = JBCheckBox("Show custom folder icons", true)
         showFileIconsCheckBox = JBCheckBox("Show custom file icons", true)
         useDefaultIconsCheckBox = JBCheckBox("Use default icons for unknown file types", true)
@@ -58,7 +58,7 @@ class WinsurfIconSettingsPanel {
         
         // Header
         val headerPanel = JPanel(FlowLayout(FlowLayout.LEFT))
-        headerPanel.add(JBLabel("Customize your IDE appearance with Winsurf icons"))
+        headerPanel.add(JBLabel("Customize your IDE appearance with modern icons"))
         
         // Settings
         val settingsPanel = FormBuilder.createFormBuilder()
