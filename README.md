@@ -1,4 +1,4 @@
-# 🎨 Winsurf Icon Theme for JetBrains IDEs
+# 🎨 Modern Icon Theme for JetBrains IDEs
 
 <div align="center">
   
