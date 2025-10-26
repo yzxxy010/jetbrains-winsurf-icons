@@ -1,1 +1,1 @@
-rootProject.name = "winsurf-icon-theme"
+rootProject.name = "Modern-icon-theme"

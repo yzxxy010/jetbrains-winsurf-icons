@@ -1,8 +1,6 @@
-# 🎨 Winsurf Icon Theme for JetBrains IDEs
+# 🎨 Modern Icon Theme for JetBrains IDEs
 
 <div align="center">
-  
-  ![Modern Icon Theme](showcase-social.svg)
   
   [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yzxxy010/jetbrains-Modern-icons/releases)
   [![JetBrains](https://img.shields.io/badge/JetBrains-2023.3+-orange.svg)](https://www.jetbrains.com/)
@@ -206,7 +204,7 @@ jetbrains-icon-theme-plugin/
 
 ### 🖼️ 图标预览
 
-![Icons Preview](windsurfIcons.png)
+![Icons Preview](modernIcons.png)
 
 > 💡 **提示**：[点击此处打开互动式图标浏览器](showcase.html) - 可搜索、分类查看所有346个图标
 

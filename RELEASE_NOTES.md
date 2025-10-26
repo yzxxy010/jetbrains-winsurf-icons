@@ -1,4 +1,4 @@
-# Winsurf Icon Theme v1.0.0
+# Modern Icon Theme v1.0.0
 
 🎉 首个正式版本发布 | First Official Release
 
@@ -20,7 +20,7 @@ Beautiful icon theme for all JetBrains IDEs with 346 carefully designed icons to
 ## 📦 安装方法 | Installation
 
 ### 方法一：直接安装（推荐）
-1. 下载 `winsurf-icon-theme-1.0.0.zip`
+1. 下载 `Modern-icon-theme-1.0.0.zip`
 2. 打开JetBrains IDE
 3. 设置 → 插件 → ⚙️ → 从磁盘安装插件...
 4. 选择下载的zip文件
@@ -28,7 +28,7 @@ Beautiful icon theme for all JetBrains IDEs with 346 carefully designed icons to
 
 ### 方法二：从源码构建
 ```bash
-git clone https://github.com/yzxxy010/jetbrains-winsurf-icons.git
+git clone https://github.com/yzxxy010/jetbrains-Modern-icons.git
 cd jetbrains-icon-theme-plugin
 .\gradlew.bat buildPlugin
 ```
@@ -58,7 +58,7 @@ Firebase, Supabase, Vercel, Netlify, AWS, Azure等
 
 ## 🐛 已知问题 | Known Issues
 
-暂无已知问题。如发现任何问题，请在 [Issues](https://github.com/yzxxy010/jetbrains-winsurf-icons/issues) 中报告。
+暂无已知问题。如发现任何问题，请在 [Issues](https://github.com/yzxxy010/jetbrains-Modern-icons/issues) 中报告。
 
 ## 📝 更新日志 | Changelog
 
@@ -77,10 +77,10 @@ Thanks to all contributors and users for your support!
 
 ## 📄 许可证 | License
 
-MIT License - 详见 [LICENSE](https://github.com/yzxxy010/jetbrains-winsurf-icons/blob/main/LICENSE)
+MIT License - 详见 [LICENSE](https://github.com/yzxxy010/jetbrains-Modern-icons/blob/main/LICENSE)
 
 ---
 
-**下载链接 | Download**: 请下载下方的 `winsurf-icon-theme-1.0.0.zip` 文件
-**项目主页 | Homepage**: https://github.com/yzxxy010/jetbrains-winsurf-icons
-**问题反馈 | Issues**: https://github.com/yzxxy010/jetbrains-winsurf-icons/issues
+**下载链接 | Download**: 请下载下方的 `Modern-icon-theme-1.0.0.zip` 文件
+**项目主页 | Homepage**: https://github.com/yzxxy010/jetbrains-Modern-icons
+**问题反馈 | Issues**: https://github.com/yzxxy010/jetbrains-Modern-icons/issues
